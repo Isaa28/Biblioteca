@@ -7,18 +7,10 @@ use Illuminate\Http\Request;
 class BookController extends Controller
 {
 
-    
-    public readonly Book $book;
-
-    public function __construct()
-    {
-        $this->book = new Book();
-    }
-
     public function index()
     {
-        $books = $this->book->all();  
-        return view('index', ['books' => $books]);
+        $books = Book::all();  
+        return view('Books.index', compact('books'));
     }
 
     /**
