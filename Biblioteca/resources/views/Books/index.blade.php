@@ -12,8 +12,6 @@
     <table>
         <tr>
             <th>Nome</th>
-            <th>Autor</th>
-            <th>Quantidade</th>
         </tr>
         @foreach ($books as $book)
             <tr>
