@@ -16,8 +16,8 @@
         @foreach ($books as $book)
             <tr>
                 <td>{{$book->name}}</td>
-                <td><a href="{{route('books.edit', book->id)}}">✏️</a></td>
-                <td><form action="{{route('books.delete', book->id)}}" method="post">@method('DELETE')@crfs <input type="submit" value="🗑️"></form></td>
+                <td><a href="{{route('books.edit', $book->id)}}">✏️</a></td>
+                <td><form action="{{route('books.destroy', $book->id)}}" method="post"> @csrf @method('DELETE') <input type="submit" value="🗑️"></form></td>
             </tr>
         @endforeach
     </table>

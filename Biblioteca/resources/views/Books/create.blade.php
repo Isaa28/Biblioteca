@@ -8,12 +8,13 @@
 <body>
     <h2>Cadastrar livro</h2>
     <form action="{{route('books.store')}}" method="post">
+        @csrf
         <label for="name">Nome:</label>
         <input type="text" name="name">
         <label for="author">Autor:</label>
         <input type="text" name="author">
-        <label for="Amount">Quantidade:</label>
-        <input type="number" name="Amount" id="">
+        <label for="amount">Quantidade:</label>
+        <input type="number" name="amount" id="">
         <input type="submit" value="Cadastrar">
     </form>
 </body>
