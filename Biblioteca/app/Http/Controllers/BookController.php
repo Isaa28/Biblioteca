@@ -22,38 +22,33 @@ class BookController extends Controller
     {
         Book::create($request->all());
         return redirect()->route('books.index');
-        // dd($request->all());
+    
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+        return view('books.edit', compact('book'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+       public function update(Request $request, string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+        $book->update($request->all());
+        return redirect()->route('books.index');
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+        $book->delete();
+        return redirect()->back();
     }
 }
