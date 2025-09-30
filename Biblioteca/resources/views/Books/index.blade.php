@@ -18,6 +18,7 @@
                 <td>{{$book->name}}</td>
                 <td><a href="{{route('books.edit', $book->id)}}">✏️</a></td>
                 <td><form action="{{route('books.destroy', $book->id)}}" method="post"> @csrf @method('DELETE') <input type="submit" value="🗑️"></form></td>
+                <td><a href="{{route('books.show', $book->id)}}">Show</a></td>
             </tr>
         @endforeach
     </table>
