@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#titulo{
+    margin-top: 50px;
+    color: #4a6fa5;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+#formulario{
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0000000d;
+    margin-top: 20px;
+}
+
+.gruposDoFormulario{
+    margin-bottom: 20px;
+}
+
+.gruposDoFormulario label{
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.gruposDoFormulario input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#botao{
+    display: inline-block;
+    background-color: #619ee4;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#botao:hover {
+    background-color: #1e487e;
+}
