@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#detalhesLivro {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#titulo{
+    color: #1e487e;
+    font-size: 50px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #619ee4;
+    font-weight: 600;
+}
+
+.tituloDaInfor{
+    color: #4a6fa5;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#detalhesLivro p {
+    padding: 5px 0;
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+#botao{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #619ee4;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: 500;
+    border: 1px solid #ccc;
+}
+
+#botao:hover{
+    background-color: #1e487e;
+}
