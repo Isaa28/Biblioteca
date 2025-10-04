@@ -93,3 +93,27 @@ td a:hover{
 td button:hover{
     color: #1e487e;
 }
+
+#erro{
+    background-color: #f8d7da; 
+    color: #721c24;           
+    border: 1px solid #f5c6cb; 
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px auto;
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#sucesso{
+    background-color: #d7f8d7; 
+    color: #1f721c;           
+    border: 1px solid #c6f5d0; 
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px auto;
+    width: 60%;
+    text-align: center;
+    font-weight: bold;
+}

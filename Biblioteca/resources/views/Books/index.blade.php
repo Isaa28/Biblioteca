@@ -12,10 +12,13 @@
         <h1 id="titulo">Livros cadastrados</h1>
         <a id="botaoCadastrar" href="{{route('books.create')}}">Cadastrar livro</a>
         @if (session()->has('sucesso'))
-            {{ session()->get('sucesso')}}
-        @else (session()->has('erro'))
-            {{ session()->get('erro')}}
+            <p id="sucesso">{{ session()->get('sucesso')}}</p>
+        @elseif (session()->has('erro'))
+            <p id="erro">{{ session()->get('erro')}}</p>
+        @else
+            <p> </p>
         @endif
+        
         <hr>
     </div>
     <table>
