@@ -20,9 +20,12 @@ class BookController extends Controller
 
     public function store(Request $request)
     {
-        Book::create($request->all());
-        return redirect()->route('books.index');
-    
+        if(Book::create($request->all())) {
+            return redirect()->route('books.index')->with('sucesso', 'Livro criado com sucesso!');    
+        }else{
+            return redirect()->route('books.index')->with('erro', 'Erro não foi possível cadastrar o livro.');
+        }
+        
     }
 
     public function show(string $id)
@@ -40,15 +43,23 @@ class BookController extends Controller
        public function update(Request $request, string $id)
     {
         $book = Book::findOrFail($id);
-        $book->update($request->all());
-        return redirect()->route('books.index');
+
+        if($book->update($request->all())) {
+            return redirect()->route('books.index')->with('sucesso', 'Livro atualizado com sucesso!');    
+        }else{
+            return redirect()->route('books.index')->with('erro', 'Erro não foi possível atualizar o livro.');
+        }
 
     }
 
     public function destroy(string $id)
     {
         $book = Book::findOrFail($id);
-        $book->delete();
-        return redirect()->back();
+
+        if($book->delete()) {
+            return redirect()->back()->with('sucesso', 'Livro deletado com sucesso!');    
+        }else{
+            return redirect()->back()->with('erro', 'Erro não foi possível deletar o livro.');
+        }
     }
 }

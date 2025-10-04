@@ -11,6 +11,11 @@
     <div id="cabeçalho">
         <h1 id="titulo">Livros cadastrados</h1>
         <a id="botaoCadastrar" href="{{route('books.create')}}">Cadastrar livro</a>
+        @if (session()->has('sucesso'))
+            {{ session()->get('sucesso')}}
+        @else (session()->has('erro'))
+            {{ session()->get('erro')}}
+        @endif
         <hr>
     </div>
     <table>
@@ -21,7 +26,7 @@
             <tr id="linhasdatabela">
                 <td>{{$book->name}}</td>
                 <td><a href="{{route('books.edit', $book->id)}}"><i class="fa-solid fa-pen"></i></a></td>
-                <td><form action="{{route('books.destroy', $book->id)}}" method="post"> @csrf @method('DELETE') <button type="submit"><i class="fa-regular fa-trash-can"></i></button></form></td>
+                <td><form action="{{route('books.destroy', $book->id)}}" method="post" onsubmit="return confirm('Tem certeza que deseja deletar este livro?');"> @csrf @method('DELETE') <button type="submit"><i class="fa-regular fa-trash-can"></i></button></form></td>
                 <td><a href="{{route('books.show', $book->id)}}"><i class="fa-regular fa-eye"></i></a></td>
             </tr>
         @endforeach
